@@ -78,5 +78,15 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+//about route
+app.get('/about', (req, res) => {
+  res.json({
+    name: "Daniel Brito",
+    bio: "I'm a senior studying Computer Science at NYU, originally from Miami, Florida. I am interested in AI, machine learning, and web development. In my free time I enjoy playing basketball, fishing, snowboarding, and spending time outdoors. I took this class to gain more experience with web development and working in a team with other developers. I am also interested in learning more about the tools and methods that real companies use to develop their software and the Agile methodology seems to be very popular.",
+    image: "front-end/src/imageofme.JPG"
+  });
+});
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
